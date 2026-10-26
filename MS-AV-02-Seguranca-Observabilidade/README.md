@@ -112,7 +112,7 @@ São testes de integração (MockMvc) cobrindo login 200/401, bloqueio na 2ª fa
 Painéis: **Logins válidos**, **Logins inválidos**, **Usuários bloqueados** (stats), evolução dos três indicadores ao longo do tempo, inválidos por motivo (donut) e taxa de logins por minuto.
 
 * Modelo provisionado: `observabilidade/grafana/dashboards/login-service-dashboard.json`
-* Export do dashboard (*Export > Export as code / JSON*): `docs/grafana-dashboard-export.json`
+* Export do dashboard feito no Grafana (*Export > Export as JSON*, formato `dashboard.grafana.app/v2`): `docs/grafana-dashboard-export.json`
 * Print screen:
 
 ![Dashboard Grafana - indicadores](docs/grafana-dashboard.png)
