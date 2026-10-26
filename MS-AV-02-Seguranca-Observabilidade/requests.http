@@ -1,0 +1,35 @@
+### Login valido (200)
+POST http://localhost:8080/login
+Content-Type: application/json
+
+{ "username": "maria", "senha": "maria123" }
+
+### Login invalido (401) - repetir 2x para bloquear
+POST http://localhost:8080/login
+Content-Type: application/json
+
+{ "username": "joao", "senha": "errada" }
+
+### Trocar senha (publico)
+PUT http://localhost:8080/trocarsenha/maria
+Content-Type: application/json
+
+{ "atual": "maria123", "nova": "nova123" }
+
+### Cadastrar usuario (ROLE_MANUTENCAO)
+POST http://localhost:8080/
+Authorization: Basic manutencao manut123
+Content-Type: application/json
+
+{ "username": "carlos", "senha": "carlos1" }
+
+### Listar usuarios (ROLE_MANUTENCAO)
+GET http://localhost:8080/
+Authorization: Basic manutencao manut123
+
+### Desbloquear usuario (ROLE_ADMIN)
+PUT http://localhost:8080/unlock/joao
+Authorization: Basic admin admin123
+
+### Metricas
+GET http://localhost:8080/actuator/prometheus

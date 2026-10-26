@@ -1,0 +1,10 @@
+# Usado pelo docker-compose (o app e acessado pelo nome do servico "login-service")
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+scrape_configs:
+  - job_name: 'login-service'
+    metrics_path: '/actuator/prometheus'
+    scrape_interval: 5s
+    static_configs:
+      - targets: ['login-service:8080']
