@@ -80,7 +80,8 @@ O datasource Prometheus e o dashboard **"Login Service - Segurança"** (pasta *M
 ### Opção 2: sem Docker
 
 ```bash
-mvn spring-boot:run
+mvnw.cmd spring-boot:run      # Windows (Maven Wrapper: nao precisa ter o Maven instalado)
+./mvnw spring-boot:run        # Linux/Mac
 # Prometheus: prometheus --config.file=observabilidade/prometheus/prometheus-local.yml
 # Grafana: grafana server -> criar a conexão Prometheus (http://localhost:9090) e
 #          importar observabilidade/grafana/dashboards/login-service-dashboard.json
@@ -100,7 +101,8 @@ O arquivo `requests.http` traz exemplos de todas as chamadas, que podem ser exec
 ### Testes
 
 ```bash
-mvn test
+mvnw.cmd test    # Windows
+./mvnw test      # Linux/Mac
 ```
 
 São testes de integração (MockMvc) cobrindo login 200/401, bloqueio na 2ª falha, unlock somente por admin, troca de senha, cadastro e listagem somente por ROLE_MANUTENCAO, e exposição das métricas e do OpenAPI.
