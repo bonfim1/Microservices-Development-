@@ -115,7 +115,9 @@ Painéis: **Logins válidos**, **Logins inválidos**, **Usuários bloqueados** (
 * Export do dashboard (*Export > Export as code / JSON*): `docs/grafana-dashboard-export.json`
 * Print screen:
 
-![Dashboard Grafana](docs/grafana-dashboard.png)
+![Dashboard Grafana - indicadores](docs/grafana-dashboard.png)
+
+![Dashboard Grafana - graficos](docs/grafana-dashboard-2.png)
 
 ## Estrutura
 
